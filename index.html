@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+     <div class="container">
+
+    <h1>🔐 Password Generator</h1>
+
+    <div class="password-box">
+      <input type="text" id="password" readonly>
+      <button class="copy-btn" onclick="copyPassword()">
+        Copy
+      </button>
+    </div>
+
+    <div class="setting">
+      <label>
+        Password Length
+        <span id="lengthValue">12</span>
+      </label>
+
+      <input type="range" min="4" max="30" value="12" id="lengthSlider">
+    </div>
+
+    <div class="checkbox-group">
+      <label>Include Uppercase</label>
+      <input type="checkbox" id="uppercase" checked>
+    </div>
+
+    <div class="checkbox-group">
+      <label>Include Lowercase</label>
+      <input type="checkbox" id="lowercase" checked>
+    </div>
+
+    <div class="checkbox-group">
+      <label>Include Numbers</label>
+      <input type="checkbox" id="numbers" checked>
+    </div>
+
+    <div class="checkbox-group">
+      <label>Include Symbols</label>
+      <input type="checkbox" id="symbols" checked>
+    </div>
+
+    <button class="generate-btn" onclick="generatePassword()">
+      Generate Password
+    </button>
+
+    <div class="strength" id="strengthText">
+      Strength: Medium
+    </div>
+
+  </div>
+
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
